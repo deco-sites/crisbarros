@@ -16,18 +16,28 @@ function Navbar({ items, searchbar }: {
     <>
       {/* Mobile Version */}
       <div
-        class={`md:hidden flex flex-row justify-end items-center h-[50px] border-b-1 border-default w-full px-2 gap-2`}
+        class={`md:hidden flex flex-row justify-between items-center h-[${navbarHeight}] w-full px-2 gap-2`}
       >
+        <a
+          href="/"
+          class={`flex-grow inline-flex items-center min-h-[${navbarHeight}]`}
+          aria-label="Store logo"
+        >
+          <Icon id="Logo" width={142} height={16} />
+        </a>
 
-        <HeaderButton variant="cart" />
-        <HeaderButton variant="menu" />
+        <div class="flex gap-1">
+          <HeaderButton variant="cart" />
+          <HeaderButton variant="menu" />
+        </div>
+
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-default w-full h-[50px] pl-2 pr-3 shadow-md">
+      <div class={`hidden md:flex flex-row justify-between items-center w-full h-[${navbarHeight}] pl-2 pr-3`}>
         <div class="flex-none w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-[160px]">
-            <Icon id="Logo" width={126} height={16} />
+            <Icon id="Logo" width={142} height={16} />
           </a>
         </div>
         <div class="flex-none w-44 flex items-center justify-end">
