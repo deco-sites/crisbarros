@@ -37,11 +37,12 @@ const options: Omit<Options, "selfURL"> = {
         "default": "#FFFFFF",
         "header": "#FFFFFF",
         "badge": "#8C3D3D", // shopping cart tem isso tambem
-        "footer": "#003232",
+        "footer": "#fff",
         "interactive": "#161616",
         "interactive-inverse": "#FFFFFF",
         "hover": "rgba(0, 0, 0, 0.04)",
         "hover-inverse": "rgba(255, 255, 255, 0.4)",
+        "footer-underline": "#A6A6A6"
       },
       textColor: {
         "default": "#161616",
@@ -52,6 +53,7 @@ const options: Omit<Options, "selfURL"> = {
         "section-title": "#161616",
         "positive": "#1A7346",
         "critical": "#B44125",
+        "textColor": "#737373"
       },
       borderColor: {
         "default": "#D4DBD7",
