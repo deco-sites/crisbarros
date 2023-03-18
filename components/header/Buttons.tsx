@@ -45,17 +45,16 @@ function CartButton() {
       variant="icon"
       class="relative"
       aria-label="open cart"
+      title={totalItems && totalItems > 1 ? `minha cesta (${totalItems} produtos)` : `minha cesta (${totalItems} produtos)`}
       disabled={loading.value}
       onClick={() => {
         displayCart.value = true;
       }}
     >
-      <Icon id="ShoppingCart" width={20} height={20} strokeWidth={2} />
-      {totalItems && (
-        <span class="absolute text-[9px] right-0 top-0 rounded-full bg-badge text-white w-4 h-4 flex items-center justify-center">
+      <Icon id="ShoppingCart" width={20} height={20} strokeWidth={1} />
+        <span class="absolute text-[10px] right-1 bottom-0 rounded-full bg-badge text-white w-4 h-4 flex items-center justify-center">
           {totalItems}
         </span>
-      )}
     </Button>
   );
 }
