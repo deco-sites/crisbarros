@@ -75,16 +75,16 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
         </Picture>
         {action && (
           <div
-            class="absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 bg-hover-inverse p-4 rounded"
-            style={{ backdropFilter: "blur(8px)" }}
+            // class="absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 bg-hover-inverse p-4 rounded"
+            // style={{ backdropFilter: "blur(8px)" }}
           >
-            <Text variant="heading-1" tone="default-inverse">
+            {/* <Text variant="heading-1" tone="default-inverse">
               {action.title}
             </Text>
             <Text variant="heading-3" tone="default-inverse">
               {action.subTitle}
             </Text>
-            <Button variant="secondary">{action.label}</Button>
+            <Button variant="secondary">{action.label}</Button> */}
           </div>
         )}
       </a>
@@ -106,7 +106,7 @@ function Dots({ images, interval = 0 }: Props) {
         }}
       >
       </style>
-      <ol class="flex items-center justify-center col-span-full gap-4 z-10 row-start-4">
+      <ol class="flex items-center ml-4 col-span-full gap-4 z-10 row-start-4">
         {images?.map((_, index) => (
           <li class="h-full">
             <button
@@ -127,7 +127,7 @@ function Dots({ images, interval = 0 }: Props) {
                       }
                     `,
                   )
-                } w-16 sm:w-20 h-0.5`}
+                } w-1 sm:w-20 h-1 rounded-full`}
                 style={{
                   background:
                     "linear-gradient(to right, #FFFFFF var(--dot-progress), rgba(255, 255, 255, 0.4) var(--dot-progress))",
@@ -192,7 +192,7 @@ function BannerCarousel({ images, preload, interval }: Props) {
         ))}
       </Slider>
 
-      <Controls />
+      {/* <Controls /> */}
 
       <Dots images={images} interval={interval} />
 
