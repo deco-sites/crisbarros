@@ -90,7 +90,7 @@ function ProductCard({ product, preload }: Props) {
           )}
         </div>
 
-        <div class="flex flex-col gap-1 py-2">
+        {/* <div class="flex flex-col gap-1 py-2">
           <Text
             class="overflow-hidden overflow-ellipsis whitespace-nowrap"
             variant="caption"
@@ -109,7 +109,7 @@ function ProductCard({ product, preload }: Props) {
               {formatPrice(price, offers!.priceCurrency!)}
             </Text>
           </div>
-        </div>
+        </div> */}
       </a>
     </div>
   );

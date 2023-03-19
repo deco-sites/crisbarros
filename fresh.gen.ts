@@ -839,9 +839,7 @@ const manifest: DecoManifest = {
             "description": "vtex config used for search autocompletion;",
           },
         },
-        "required": [
-          "alerts",
-        ],
+        "required": [],
       },
       "outputSchema": null,
     },

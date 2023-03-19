@@ -8,7 +8,7 @@ import { useId } from "preact/hooks";
 import { animation, keyframes, tw } from "twind/css";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
-export interface Banner {
+export interface BoxBanner {
   /** @description desktop otimized image */
   desktop: LiveImage;
   /** @description mobile otimized image */
@@ -28,7 +28,7 @@ export interface Banner {
 }
 
 export interface Props {
-  images?: Banner[];
+  images?: BoxBanner[];
   /**
    * @description Check this option when this banner is the biggest image on the screen for image optimizations
    */
@@ -40,7 +40,7 @@ export interface Props {
   interval?: number;
 }
 
-function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
+function BannerItem({ image, lcp }: { image: BoxBanner; lcp?: boolean }) {
   const {
     alt,
     mobile,
@@ -75,8 +75,8 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
         </Picture>
         {action && (
           <div
-            // class="absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 bg-hover-inverse p-4 rounded"
-            // style={{ backdropFilter: "blur(8px)" }}
+            class="absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 bg-hover-inverse p-4 rounded"
+            style={{ backdropFilter: "blur(8px)" }}
           >
             {/* <Text variant="heading-1" tone="default-inverse">
               {action.title}
@@ -106,7 +106,7 @@ function Dots({ images, interval = 0 }: Props) {
         }}
       >
       </style>
-      <ol class="flex items-center ml-4 col-span-full gap-4 z-10 row-start-4">
+      <ol class="flex items-center justify-center col-span-full gap-4 z-10 row-start-4">
         {images?.map((_, index) => (
           <li class="h-full">
             <button
@@ -127,7 +127,7 @@ function Dots({ images, interval = 0 }: Props) {
                       }
                     `,
                   )
-                } w-1 sm:w-20 h-1 rounded-full`}
+                } w-16 sm:w-20 h-0.5`}
                 style={{
                   background:
                     "linear-gradient(to right, #FFFFFF var(--dot-progress), rgba(255, 255, 255, 0.4) var(--dot-progress))",
@@ -178,7 +178,7 @@ function Controls() {
   );
 }
 
-function BannerCarousel({ images, preload, interval }: Props) {
+function BoxBanner({ images, preload, interval }: Props) {
   const id = useId();
 
   return (
@@ -194,11 +194,11 @@ function BannerCarousel({ images, preload, interval }: Props) {
 
       {/* <Controls /> */}
 
-      <Dots images={images} interval={interval} />
+      {/* <Dots images={images} interval={interval} /> */}
 
       <SliderControllerJS rootId={id} interval={interval && interval * 1e3} />
     </div>
   );
 }
 
-export default BannerCarousel;
+export default BoxBanner;
