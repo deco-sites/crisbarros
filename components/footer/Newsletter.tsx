@@ -182,7 +182,7 @@ function Newsletter() {
             (DE SEGUNDA À SEXTA DAS 10H ÀS 17H)
           </p>
         </div>
-        <div className="bg-footer-underline w-screen h-[1px] mt-10"></div>
+        <div className="bg-footer-underline w-screen h-[0.5px] mt-10"></div>
         <div className="mt-16">
           <p className="text-textColor text-[12px] text-center">
             @ 2018 CRIS BARROS - LOJA ONLINE
