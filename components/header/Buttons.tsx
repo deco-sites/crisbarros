@@ -52,9 +52,11 @@ function CartButton() {
       }}
     >
       <Icon id="ShoppingCart" width={20} height={20} strokeWidth={1} />
+      {totalItems && totalItems > 0 ?
         <span class="absolute text-[10px] right-1 bottom-0 rounded-full bg-badge text-white w-4 h-4 flex items-center justify-center">
           {totalItems}
         </span>
+        : false}
     </Button>
   );
 }
