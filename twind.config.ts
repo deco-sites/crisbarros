@@ -37,12 +37,14 @@ const options: Omit<Options, "selfURL"> = {
         "default": "#FFFFFF",
         "header": "#FFFFFF",
         "badge": "#000000", // shopping cart tem isso tambem
-        "footer": "#fff",
+        "footer": "#FFFFFF",
         "interactive": "#161616",
         "interactive-inverse": "#FFFFFF",
         "hover": "rgba(0, 0, 0, 0.04)",
         "hover-inverse": "rgba(255, 255, 255, 0.4)",
         "footer-underline": "#A6A6A6",
+        "gray": "#B2B3B3",
+        "bg-gray": "#FBFBFB",
       },
       textColor: {
         "default": "#161616",
@@ -54,6 +56,8 @@ const options: Omit<Options, "selfURL"> = {
         "positive": "#1A7346",
         "critical": "#B44125",
         "textColor": "#737373",
+        "textGray": "#B2B3B3",
+        "textGrayMed": "#666666"
       },
       borderColor: {
         "default": "#D4DBD7",
@@ -113,7 +117,8 @@ const options: Omit<Options, "selfURL"> = {
       },
     },
     fontFamily: {
-      sans: ["Albert Sans", "sans-serif"],
+      sans: ["Albert Sans", "Futura LT", "sans-serif"],
+      futura: ["Futura LT", "sans-serif"],
       serif: ["inherit", "serif"],
     },
     screens: {
@@ -132,6 +137,8 @@ const options: Omit<Options, "selfURL"> = {
       display: "flex",
       flexDirection: "column",
       minHeight: "100vh",
+      fontSmoothing: "antialiased",
+      webkitFontSmoothing: "antialiased"
     },
     'section[data-manifest-key="./sections/Footer.tsx"]': {
       marginTop: "auto",
